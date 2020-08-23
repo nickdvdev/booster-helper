@@ -119,50 +119,6 @@ function askServer (question) {
   });
 };
 
-// bot.on('message', msg => {
-//   const chatId = getChatId(msg);
-//   const userInfo = {
-//     id: msg.from.id,
-//     isBot: msg.from.is_bot,
-//     firstName: msg.from.first_name,
-//     lastName: msg.from.last_name,
-//     username: msg.from.username,
-//     language: msg.from.language_code
-//   };
-
-
-//   switch (msg.text) {
-//     //games 
-//     case kb.games.cs:
-//       order.game = kb.games.cs;
-//     case kb.games.dota:
-//       order.game = kb.games.dota;
-//     case kb.games.lol:
-//       order.game = kb.games.lol;
-//       bot.sendMessage(chatId, `Which tier are you currently on ${msg.from.first_name}?`, {
-//         reply_markup: {
-//           keyboard: keyboard.tier
-//         }
-//       })
-//       break
-//     // startTier 
-//     case kb.tier.diamond:
-//       break
-//     case kb.tier.iron:
-//       break
-//     case kb.tier.bronze:
-//       break
-//     //back button
-//     case kb.back:
-//       bot.sendMessage(chatId, `Hi, ${msg.from.first_name} ${msg.from.last_name}!\nWhat are we boosting?`, {
-//         reply_markup: {
-//           keyboard: keyboard.games
-//         }
-//       })
-//       break
-//   }
-// });
-
 
 //==============================================================
 function sendOrder(user, order) {
