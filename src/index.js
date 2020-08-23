@@ -17,7 +17,7 @@ const order = {
   points: ''
 };
 
-const bot = new TelegramBot (config.TOKEN, {
+const bot = new TelegramBot (TOKEN, {
   polling: {
     interval: 300,
     autoStart: true,
@@ -184,6 +184,6 @@ CREDENTIALS
 Login: ${credentials.login}
 Password: ${credentials.password}
 `;
-  bot.sendMessage(config.boosterAdmins, orderInfo, {
+  bot.sendMessage(boosterAdmins, orderInfo, {
   });
 };
