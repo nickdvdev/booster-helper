@@ -1,7 +1,5 @@
 const TelegramBot = require('node-telegram-bot-api');
-const config = require('./config');
 const helper = require('./helper');
-const kb = require('./keyboard-buttons');
 const keyboard = require('./keyboard');
 const { getChatId } = require('./helper');
 let userInfo;
@@ -189,62 +187,3 @@ Password: ${credentials.password}
   bot.sendMessage(config.boosterAdmins, orderInfo, {
   });
 };
-
-// standart training and debug
-// bot.on('message', msg => {
-//   const html = `<strong>Hello, ${msg.from.first_name} ${msg.from.last_name}</strong>
-//   Your language is: ${msg.from.language_code}
-//   Your id is: ${msg.from.id}
-//   This chat is: ${msg.chat.type}
-//   <pre>
-//     ${helper.debug(msg)}
-//   </pre>
-//   `;
-
-//   bot.sendMessage(msg.chat.id, html, {
-//     parse_mode: 'HTML'
-//   });
-// });
-
-
-// Important info
-  
-
-//     {
-//     "message_id": 227,
-//     "from": {
-//         "id": 67257081,
-//         "is_bot": false,
-//         "first_name": "Nick",
-//         "last_name": "Cage",
-//         "username": "Sebulba",
-//         "language_code": "en"
-//     },
-//     "chat": {
-//         "id": -324611645,
-//         "title": "BoosterBOYZ",
-//         "type": "group",
-//         "all_members_are_administrators": true
-//     },
-//     "date": 1598118902,
-//     "new_chat_participant": {
-//         "id": 1138509200,
-//         "is_bot": true,
-//         "first_name": "Helper",
-//         "username": "BoostHelper_bot"
-//     },
-//     "new_chat_member": {
-//         "id": 1138509200,
-//         "is_bot": true,
-//         "first_name": "Helper",
-//         "username": "BoostHelper_bot"
-//     },
-//     "new_chat_members": [
-//         {
-//             "id": 1138509200,
-//             "is_bot": true,
-//             "first_name": "Helper",
-//             "username": "BoostHelper_bot"
-//         }
-//     ]
-// }
